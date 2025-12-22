@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily project</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <button onclick="reset()" class="header-icons">
+          <i onclick="" class="fa-solid fa-arrows-rotate"></i>
+        </button>
+        <button class="header-icons">
+          <i class="fa-solid fa-circle-info"></i>
+        </button>
+        <button class="header-icons"><i class="fa-solid fa-gear"></i></button>
+      </div>
+      <div></div>
+      <div class="hero">
+        <button onclick="decrease()" class="sign">-</button>
+        <p id="numbers" class="number text-font">0</p>
+        <button onclick="increase()" class="sign">+</button>
+      </div>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
