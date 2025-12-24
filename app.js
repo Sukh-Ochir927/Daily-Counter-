@@ -8,13 +8,12 @@ const minus = document.querySelector("#minus");
 
 const sign = document.querySelector("#sign");
 
-console.log(sign);
+const icons = document.querySelector("#icons");
 
 let num = 0;
 
 const increase = () => {
   num += 1;
-  console.log(num);
   renderNum();
 };
 
@@ -25,32 +24,25 @@ const decrease = () => {
   renderNum();
 };
 
-const minusIcon = () => {
-  if (num === 0) {
-    console.log(num);
-
-    minus.classList.add("display-block");
-  }
+const reset = () => {
+  num = 0;
+  renderNum();
 };
-minusIcon();
 
 const renderNum = () => {
   numbers.innerHTML = num;
-  minusIcon();
+  icons.innerHTML = moon;
+  theme();
 };
 
-const reset = () => {
-  num = 0;
+let moon = `<i onclick="theme()" class="fa-solid fa-moon"></i>`;
 
+const theme = () => {
+  moon = `<i id="icons" onclick="toggle()" class="fa-solid fa-sun"></i>`;
+  toggle();
   renderNum();
 };
 
 const toggle = () => {
   container.classList.toggle("light");
 };
-
-// 2 dark bas ligth gesen 2 modetoi baina.
-// Tedgeeriig sar bolon narnii iconoor tolooluulj.
-// Default mode n har, saaral ongote bogood, default mode deer baih uyd UI deer narnii icon bairlana.
-// Tuhain narnii icon deer darah uyd tuhain icon sar bolon oorchlogdoj, ligth mode ruu shiljih buyu,
-// Tsagaaan tsaivari ongotei boloh ba ter uyd UI deer haragdah icon sarnii icon bolon oorchlogdnoo.
